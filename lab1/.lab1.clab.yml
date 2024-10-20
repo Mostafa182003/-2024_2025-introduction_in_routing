@@ -1,0 +1,35 @@
+name: lab1
+mgmt:
+    network: mgmt-net
+    ipv4-subnet: 192.168.5.0/24
+topology:
+    kinds:
+        vr-ros:
+            image: vrnetlab/mikrotik_routeros:6.47.9
+        linux:
+            image: ghcr.io/hellt/network-multitool
+    nodes:
+        R01:
+            kind: vr-ros
+            mgmt-ipv4: 192.168.5.2
+        SW01:
+            kind: vr-ros
+            mgmt-ipv4: 192.168.5.3
+        SW02:
+            kind: vr-ros
+            mgmt-ipv4: 192.168.5.4
+        SW03:
+            kind: vr-ros
+            mgmt-ipv4: 192.168.5.5
+        PC1:
+            kind: linux
+            mgmt-ipv4: 192.168.5.6
+        PC2:
+            kind: linux
+            mgmt-ipv4: 192.168.5.7
+    links:
+        - endpoints: ["SW01:eth2", "R01:eth2"]
+        - endpoints: ["SW01:eth3", "SW02:eth2"]
+        - endpoints: ["SW02:eth3", "PC1:eth2"]
+        - endpoints: ["SW01:eth4", "SW03:eth2"]
+        - endpoints: ["SW03:eth3", "PC2:eth2"]
