@@ -27,9 +27,9 @@ R01:
 
 PC01:
 
-<img width="567" alt="PC1" src="https://github.com/user-attachments/assets/1c723f74-7029-4e6e-9ba1-884a3e4244ee">
+<img width="567" alt="PC1" src="/images/1.png">
 
 
 PC02:
 
-<img width="579" alt="PC2" src="https://github.com/user-attachments/assets/ab74b1a6-ffd2-4ad9-9b7e-eb2a1019cfb4">
+<img width="579" alt="PC2" src="/images/2.png">
